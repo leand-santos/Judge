@@ -1,2 +1,0 @@
-PowerShell
-Get-Content input.txt | .\sarq > dados.out

@@ -1,0 +1,4 @@
+PowerShell
+Get-Content input.txt | .\sarq > dados.out
+Linux/Mac/cmd
+g++ arq.cpp -o arq && ./arq < input.txt > output.txt
