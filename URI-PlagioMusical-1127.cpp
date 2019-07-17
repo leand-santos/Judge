@@ -8,7 +8,7 @@
 using namespace std;
 
 map<string, int> idNotas;
-void setID()
+void setID()J
 {
     idNotas["C"] = idNotas["B#"] = 1;
     idNotas["C#"] = idNotas["Db"] = 2;

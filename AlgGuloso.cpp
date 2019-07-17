@@ -5,12 +5,12 @@
 using namespace std;
 
 int mat[1000][1000];
-int n, m;
+int n, m, soma = 0;
 
 int ajustaNum(int num)
 {
     if (num < 0)
-        num = m;
+        num = n - 1;
     else if (num > m)
         num = 0;
     return num;
@@ -25,11 +25,13 @@ void menorCaminhoIte()
             menor = mat[i][0];
             k = i;
         }
-    cout << menor << " ";
-    for (int i = 1; i < n; i++)
+    soma += menor;
+    for (int i = 1; i < m; i++)
     {
         int menor = mat[ajustaNum(k - 1)][i], j = -1;
-        //cout << mat[ajustaNum(k - 1)][i] << " " << k <<" " << ajustaNum(k - 1) << endl;
+        //cout << menor << " " << ajustaNum(k - 1) << endl;
+        //printf("\nk-1=%d, k+1 = %d\n", ajustaNum(k - 1), ajustaNum(k + 1));
+
         if (menor > mat[k][i])
         {
             menor = mat[k][i];
@@ -41,8 +43,9 @@ void menorCaminhoIte()
             j = 1;
         }
         k += j;
-        cout << menor << " ";
+        soma += menor;
     }
+    cout << soma;
 }
 int main()
 {
