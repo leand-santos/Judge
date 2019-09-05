@@ -31,59 +31,52 @@ void caminho(int cX, int cY, int nMov) {
     vet[nMov][0] = cX;
     vet[nMov][1] = cY;
 
+    if (!existe(cX, cY))
+        return;
+
     if (cX == peaoX && cY == peaoY && nMov != menorNumMov) {
         print_vetor(nMov);
         cout << "nmov: " << nMov << " " << endl;
         menorNumMov = nMov;
-        //cX = cavaloX;
-        //cY = cavaloY;
         nMov = 0;
         return;
     }
-    if (!visitado[cX + 1][cY + 2] && existe(cX + 1, cY + 2) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX + 1][cY + 2] && nMov < menorNumMov) {
         visitado[cX + 1][cY + 2] = true;
         caminho(cX + 1, cY + 2, nMov + 1);
         visitado[cX + 1][cY + 2] = false;
     }
-    if (!visitado[cX + 1][cY - 2] && existe(cX + 1, cY - 2) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX + 1][cY - 2] && nMov < menorNumMov) {
         visitado[cX + 1][cY - 2] = true;
         caminho(cX + 1, cY - 2, nMov + 1);
         visitado[cX + 1][cY - 2] = false;
     }
-    if (!visitado[cX - 1][cY + 2] && existe(cX - 1, cY + 2) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX - 1][cY + 2] && nMov < menorNumMov) {
         visitado[cX - 1][cY + 2] = true;
         caminho(cX - 1, cY + 2, nMov + 1);
         visitado[cX - 1][cY + 2] = false;
     }
-    if (!visitado[cX - 1][cY - 2] && existe(cX - 1, cY - 2) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX - 1][cY - 2] && nMov < menorNumMov) {
         visitado[cX - 1][cY - 2] = true;
         caminho(cX - 1, cY - 2, nMov + 1);
         visitado[cX - 1][cY - 2] = false;
     }
-    if (!visitado[cX + 2][cY + 1] && existe(cX + 2, cY + 1) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX + 2][cY + 1] && nMov < menorNumMov) {
         visitado[cX + 2][cY + 1] = true;
         caminho(cX + 2, cY + 1, nMov + 1);
         visitado[cX + 2][cY + 1] = false;
     }
-    if (!visitado[cX + 2][cY - 1] && existe(cX + 2, cY - 1) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX + 2][cY - 1] && nMov < menorNumMov) {
         visitado[cX + 2][cY - 1] = true;
         caminho(cX + 2, cY - 1, nMov + 1);
         visitado[cX + 2][cY - 1] = false;
     }
-    if (!visitado[cX - 2][cY + 1] && existe(cX - 2, cY + 1) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX - 2][cY + 1] && nMov < menorNumMov) {
         visitado[cX - 2][cY + 1] = true;
         caminho(cX - 2, cY + 1, nMov + 1);
         visitado[cX - 2][cY + 1] = false;
     }
-    if (!visitado[cX - 2][cY - 1] && existe(cX - 2, cY - 1) &&
-        nMov < menorNumMov) {
+    if (!visitado[cX - 2][cY - 1] && nMov < menorNumMov) {
         visitado[cX - 2][cY - 1] = true;
         caminho(cX - 2, cY - 1, nMov + 1);
         visitado[cX - 2][cY - 1] = false;
