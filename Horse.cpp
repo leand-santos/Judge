@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -21,8 +22,8 @@ void print_vector() {
 }
 
 void print_vetor(int n) {
-    for (int i = 0; i < n; i++)
-        cout << vet[i][0] << " " << vet[i][1] << " ";
+    for (int i = 0; i <= n; i++)
+        printf("%c%d ", vet[i][0] + 65, vet[i][1] + 1);
     cout << endl;
 }
 
@@ -35,10 +36,11 @@ void caminho(int cX, int cY, int nMov) {
         return;
 
     if (cX == peaoX && cY == peaoY && nMov != menorNumMov) {
+        vet[nMov][0] = peaoX;
+        vet[nMov][1] = peaoY;
         print_vetor(nMov);
-        cout << "nmov: " << nMov << " " << endl;
         menorNumMov = nMov;
-        nMov = 0;
+        cout << "N = " << nMov << endl;
         return;
     }
     if (!visitado[cX + 1][cY + 2] && nMov < menorNumMov) {
@@ -83,13 +85,29 @@ void caminho(int cX, int cY, int nMov) {
     }
 }
 
-int main() {
+void convert(string horse, string pawn) {
+    if (horse[0] >= 97)
+        cavaloX = horse[0] - 97;
+    else
+        cavaloX = horse[0] - 65;
 
+    if (pawn[0] >= 97)
+        peaoX = pawn[0] - 97;
+    else
+        peaoX = pawn[0] - 65;
+
+    cavaloY = horse[1] - 49;
+    peaoY = pawn[1] - 49;
+}
+
+int main() {
+    string horse, pawn;
+    cin >> horse;
+    cin >> pawn;
+    convert(horse, pawn);
     for (int i = 0; i < 8; i++)
         for (int j = 0; j < 8; j++)
             visitado[i][j] = false;
-    cin >> cavaloX >> cavaloY;
-    cin >> peaoX >> peaoY;
     caminho(cavaloX, cavaloY, 0);
     return 0;
 }
