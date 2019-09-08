@@ -23,8 +23,8 @@ bool solucao(int Y, int X, int soma) {
         printaVet();
         cout << "soma: " << soma << endl;
         return true;
-    } else if (soma >= menorSoma)
-        return true;
+    } /*else if (soma >= menorSoma)
+        return true;*/
     return false;
 }
 
@@ -35,26 +35,19 @@ void calculaMenorCaminho(int posY, int posX, int soma) {
     vet[posX] = mat[posY][posX];
     if (solucao(posY, posX, soma))
         return;
-    if (!verifica[posY - 1][posX + 1]) {
-        verifica[posY - 1][posX + 1] = true;
-        calculaMenorCaminho(posY - 1, posX + 1, soma);
-        verifica[posY - 1][posX + 1] = false;
-    }
-    if (!verifica[posY][posX + 1]) {
-        verifica[posY][posX + 1] = true;
-        calculaMenorCaminho(posY, posX + 1, soma);
-        verifica[posY][posX + 1] = false;
-    }
-    if (!verifica[posY + 1][posX + 1]) {
-        verifica[posY + 1][posX + 1] = true;
-        calculaMenorCaminho(posY + 1, posX + 1, soma);
-        verifica[posY + 1][posX + 1] = false;
-    }
-    if (!verifica[posY + 1][posX]) {
-        verifica[posY + 1][posX] = true;
-        calculaMenorCaminho(posY + 1, posX, soma);
-        verifica[posY + 1][posX] = false;
-    }
+    if (verifica[posY][posX])
+        return;
+    verifica[posY][posX] = true;
+
+    calculaMenorCaminho(posY - 1, posX + 1, soma);
+
+    calculaMenorCaminho(posY, posX + 1, soma);
+
+    calculaMenorCaminho(posY + 1, posX + 1, soma);
+
+    calculaMenorCaminho(posY + 1, posX, soma);
+
+    verifica[posY][posX] = false;
 }
 
 int main() {
