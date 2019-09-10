@@ -1,15 +1,19 @@
-*-> I 1
-A-> F K 2
-B-> D 1
-C-> B D E 3
-D-> Saida 1
-E-> I 1
-Entrada-> A 1
-F-> C J 2
-H-> G 1
-I-> L M 2
-J-> H G * 3
-L-> M 1
-M-> K 1
-5
-4
+*-> C 
+B-> A GT * 
+C-> I D 
+D-> Saida 
+Entrada-> A 
+GT-> H 
+H-> * 
+I-> D 
+Chave anterior: Entrada
+Nova Chave: A
+Chave anterior: *
+Nova Chave: C
+Chave anterior: C
+Nova Chave: I
+Chave anterior: I
+Nova Chave: D
+Chave anterior: C
+Nova Chave: D
+1005
