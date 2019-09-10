@@ -1,13 +1,15 @@
-*-> I
-A-> FK
-B-> D
-C-> BDE
-E-> I
-Entrada-> A
-F-> CJ
-H-> G
-I-> LM
-J-> HG*
-K-> Saida
-L-> M
-M-> K
+*-> I 1
+A-> F K 2
+B-> D 1
+C-> B D E 3
+D-> Saida 1
+E-> I 1
+Entrada-> A 1
+F-> C J 2
+H-> G 1
+I-> L M 2
+J-> H G * 3
+L-> M 1
+M-> K 1
+5
+4
