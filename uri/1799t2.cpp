@@ -38,8 +38,9 @@ int main() {
         cin >> first >> second;
         pushGrafo(convInt(first, cont), convInt(second, cont));
     }
-    for (int i = 0; i < nVertices; i++) {
-        for (int j = 0; j < grafo[i].size(); i++)
+    for (int i = 0; i < cont; i++) {
+        cout << i << ": ";
+        for (int j = 0; j < grafo[i].size(); j++)
             cout << grafo[i][j] << " ";
         cout << endl;
     }
