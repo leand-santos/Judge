@@ -1,70 +1,48 @@
 #include <iostream>
 #include <map>
-#include <set>
 #include <vector>
-#define MAX_V 1001
+#define MAX 3000
 
 using namespace std;
 
-map<string, vector<string>> id;
-set<string> aux;
+int nVertices;
+map<string, int> id;
+vector<int> grafo[3000];
 
-int menor_Mov = MAX_V;
-string achar;
-
-bool existe(string chave, int indice) {
-    if (id.count(chave)) {
-        if (id[chave].size() <= indice) {
-            return false;
-        }
-        return true;
-    }
+bool adj(int n, int m) {
+    for (int i = 0; i < grafo[n].size(); i++)
+        if (m == grafo[n][i])
+            return true;
     return false;
 }
 
-bool solucao(string chave, int indice, int mov) {
-    if (id[chave][indice] == achar && mov < menor_Mov) {
-        menor_Mov = mov;
-        return true;
+int convInt(string str, int &cont) {
+    if (!id.count(str)) {
+        id[str] = cont;
+        cont++;
     }
-    return false;
+    return id[str];
 }
 
-void achaMenorCaminho(string chave, int indice, int mov) {
-    if (!existe(chave, indice))
-        return;
-    if (solucao(chave, indice, mov))
-        return;
-    cout << "Chave anterior: " << chave << endl;
-    chave = id[chave][indice];
-    cout << "Nova Chave: " << chave << endl;
-    for (int i = 0; i < id[chave].size(); i++)
-        achaMenorCaminho(chave, i, mov + 1);
+void pushGrafo(int a, int b) {
+    if (!adj(a, b))
+        grafo[a].push_back(b);
+    if (!adj(b, a))
+        grafo[b].push_back(a);
 }
-
 int main() {
-    int n, m, resultado;
+    int cont = 0, nArestas;
     string first, second;
-    cin >> n >> m;
-    for (int i = 0; i < m; i++) {
+    scanf("%d %d", &nVertices, &nArestas);
+    for (int i = 0; i < nVertices; i++) {
         cin >> first >> second;
-        id[first].push_back(second);
-        aux.insert(first);
+        pushGrafo(convInt(first, cont), convInt(second, cont));
     }
-    set<string>::iterator ite;
-    for (ite = aux.begin(); ite != aux.end(); ++ite) {
-        cout << *ite << "-> ";
-        for (int i = 0; i < id[*ite].size(); i++)
-            cout << id[*ite][i] << " ";
+    for (int i = 0; i < cont; i++) {
+        cout << i << ": ";
+        for (int j = 0; j < grafo[i].size(); j++)
+            cout << grafo[i][j] << " ";
         cout << endl;
     }
-    achar = "*";
-    achaMenorCaminho("Entrada", 0, 0);
-    resultado = menor_Mov + 1;
-    menor_Mov = MAX_V;
-    achar = "Saida";
-    achaMenorCaminho("*", 0, 0);
-    resultado += menor_Mov + 1;
-    cout << resultado << endl;
     return 0;
 }
