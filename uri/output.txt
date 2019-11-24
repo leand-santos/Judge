@@ -1,14 +1,1 @@
-NOTAS:
-5 nota(s) de R$ 100.00
-1 nota(s) de R$ 50.00
-1 nota(s) de R$ 20.00
-0 nota(s) de R$ 10.00
-1 nota(s) de R$ 5.00
-0 nota(s) de R$ 2.00
-MOEDAS:
-1 moeda(s) de R$ 1.00
-1 moeda(s) de R$ 50.00
-0 moeda(s) de R$ 25.00
-2 moeda(s) de R$ 10.00
-0 moeda(s) de R$ 5.00
-3 moeda(s) de R$ 1.00
+oi
