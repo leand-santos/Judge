@@ -4,8 +4,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     int segundos, horas, minutos;
     cin >> segundos;
     horas = segundos / 3600;

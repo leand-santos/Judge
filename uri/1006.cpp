@@ -4,8 +4,7 @@ using namespace std;
 // status: Accepted
 // problem type: Iniciante
 
-int main()
-{
+int main() {
     double nA, nB, nC, result;
     cin >> nA >> nB >> nC;
     result = (nA * 2 + nB * 3 + nC * 5) / 10;

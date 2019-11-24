@@ -5,14 +5,12 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     bool valida;
     int numeroPosicoes = 0;
     string mensagem, palavra;
     cin >> mensagem >> palavra;
-    for (int i = 0; i <= mensagem.length() - palavra.length(); i++)
-    {
+    for (int i = 0; i <= mensagem.length() - palavra.length(); i++) {
         valida = false;
         for (int j = 0; j < palavra.length(); j++)
             if (mensagem[i + j] == palavra[j])

@@ -4,8 +4,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     double h, kmh;
     cin >> h >> kmh;
     cout << fixed;

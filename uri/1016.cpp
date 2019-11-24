@@ -4,10 +4,9 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     int km;
     cin >> km;
-    cout << km*2 << " minutos" << endl;
+    cout << km * 2 << " minutos" << endl;
     return 0;
 }

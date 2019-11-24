@@ -4,8 +4,7 @@ using namespace std;
 // status: Accepted
 // problem type: Iniciante
 
-int main()
-{
+int main() {
     int number, hours;
     double salary;
     cin >> number >> hours >> salary;

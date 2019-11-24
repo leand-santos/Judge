@@ -4,8 +4,7 @@ using namespace std;
 // status: Accepted
 // problem type: Iniciante
 
-int main()
-{
+int main() {
     int a, b;
     cin >> a >> b;
     cout << "X = " << a + b << endl;
