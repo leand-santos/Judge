@@ -9,7 +9,7 @@ int main() {
     cin >> salario;
     if (salario <= 2000)
         cout << "Isento" << endl;
-    else {
+    else {    
         salario -= 2000;
         if (salario >= 1000) {
             resultado += 1000 * 0.08;
