@@ -1,5 +1,5 @@
 #include <iostream>
-// status: Wrong 20%
+// status: Accepted
 // problem type: Iniciante
 
 using namespace std;
@@ -25,7 +25,7 @@ int main() {
             resultado += salario * 0.28;
         cout << fixed;
         cout.precision(2);
-        cout << resultado << endl;
+        cout << "R$ " <<resultado << endl;
     }
 
     return 0;
