@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-// status:
+// status: Accepted
 // problem type: Iniciante
 
 using namespace std;
@@ -11,8 +11,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> k;
         bool primo = true;
-        cout << k;
-        for (int j = 0; j < k && primo; j++) {
+        for (int j = 2; j < k && primo; j++) {
             if (k % j == 0) {
                 cout << k << " nao eh primo" << endl;
                 primo = false;
