@@ -2,6 +2,8 @@
 #include <map>
 #include <vector>
 #define MAX 3000
+// status: Time limit exceeded
+// problem type: Grafos
 
 using namespace std;
 
