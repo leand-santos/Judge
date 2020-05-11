@@ -1,0 +1,23 @@
+
+m: a
+I: a
+PILHA TOP:a
+R: a
+
+m: b
+I: b
+PILHA TOP:b
+R: b
+
+m: d
+I: c
+I: d
+PILHA TOP:d
+R: d
+
+m: c
+I: e
+PILHA TOP:e
+ Impossible
+m: e
+
