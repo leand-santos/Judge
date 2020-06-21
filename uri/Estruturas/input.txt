@@ -1,4 +1,0 @@
-5
-a b c d e
-a b d c e
-0
