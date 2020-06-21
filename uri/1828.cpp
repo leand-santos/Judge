@@ -2,7 +2,7 @@
 #include <string>
 
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 using namespace std;
 

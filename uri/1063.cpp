@@ -2,7 +2,7 @@
 #include <queue>
 #include <stack>
 // status: Wrong 5%
-// problem type: Estruturas
+// problem type: Structures
 
 using namespace std;
 

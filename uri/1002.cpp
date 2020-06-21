@@ -2,7 +2,7 @@
 
 using namespace std;
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 int main() {
     double r, n = 3.14159, area;

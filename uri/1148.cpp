@@ -2,7 +2,7 @@
 #include <queue>
 #include <vector>
 // status:
-// problem type: Grafos
+// problem type: Graphs
 
 using namespace std;
 

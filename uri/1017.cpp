@@ -1,6 +1,6 @@
 #include <iostream>
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 using namespace std;
 

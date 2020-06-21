@@ -2,7 +2,7 @@
 
 using namespace std;
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 int main() {
     double n1, n2, result;

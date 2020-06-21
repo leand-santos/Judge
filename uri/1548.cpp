@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include <iostream>
 // status: Accepted
-// problem type: Estruturas e Bibliotecas
+// problem type: Structures
 
 using namespace std;
 

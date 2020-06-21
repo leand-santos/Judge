@@ -3,7 +3,7 @@
 #include <vector>
 #define MAX 3000
 // status: Time limit exceeded
-// problem type: Grafos
+// problem type: Graphs
 
 using namespace std;
 

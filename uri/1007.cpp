@@ -2,7 +2,7 @@
 
 using namespace std;
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 int main() {
     int n1, n2, n3, n4, diferenca;

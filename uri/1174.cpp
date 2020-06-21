@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 #include <iostream>
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 int min(int a, int b) { return (a + b + abs(a - b)) / 2; }
 

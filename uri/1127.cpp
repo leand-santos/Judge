@@ -1,15 +1,14 @@
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
-// Type: AD-HOC
-// Status: Time limit exceeded
+// status: Time limit exceeded
+// problem type: AD-HOC
 
 using namespace std;
 
 map<string, int> idNotas;
-void setID()
-{
+void setID() {
     idNotas["C"] = idNotas["B#"] = 1;
     idNotas["C#"] = idNotas["Db"] = 2;
     idNotas["D"] = 3;
@@ -25,24 +24,20 @@ void setID()
 }
 int nNotas1, nNotas2;
 string notas1, notas2;
-int main()
-{
+int main() {
     setID();
-    while (true)
-    {
+    while (true) {
         bool valida;
         int diferenca, last;
         string aux;
         cin >> nNotas1 >> nNotas2;
         if (nNotas1 == 0 && nNotas2 == 0)
             break;
-        for (int i = 0; i < nNotas1; i++)
-        {
+        for (int i = 0; i < nNotas1; i++) {
             cin >> aux;
             if (i == 0)
                 last = idNotas[aux];
-            else
-            {
+            else {
                 diferenca = idNotas[aux] - last;
                 last = idNotas[aux];
                 if (i == nNotas1 - 1)
@@ -52,13 +47,11 @@ int main()
             }
         }
         cout << notas1 << endl;
-        for (int i = 0; i < nNotas2; i++)
-        {
+        for (int i = 0; i < nNotas2; i++) {
             cin >> aux;
             if (i == 0)
                 last = idNotas[aux];
-            else
-            {
+            else {
                 diferenca = idNotas[aux] - last;
                 last = idNotas[aux];
                 if (i == nNotas2 - 1)

@@ -1,8 +1,8 @@
 #include <iostream>
 
 using namespace std;
-// status: Acecepted
-// problem type: Iniciante
+// status: Accepted
+// problem type: Beginner
 
 int main() {
     int codigo, numero;

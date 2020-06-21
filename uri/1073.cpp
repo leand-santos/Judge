@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 // status: Accepted
-// problem type: Iniciante
+// problem type: Beginner
 
 using namespace std;
 
