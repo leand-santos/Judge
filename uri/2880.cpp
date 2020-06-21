@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-// Type: Strings
-// Status: Accepted
+// status: Accepted
+// problem type: Strings
 
 using namespace std;
 

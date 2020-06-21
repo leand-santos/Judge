@@ -1,5 +1,5 @@
 #include <iostream>
-// status:Accepted
+// status: Accepted
 // problem type: Beginner
 
 using namespace std;
